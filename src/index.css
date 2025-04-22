@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.lll{
+    color : #ff2f2ff6
+}
+
+.suggest{
+    scrollbar-width: none;
+}
+
+*{
+    scrollbar-width: none;
+}
