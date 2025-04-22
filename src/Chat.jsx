@@ -1,4 +1,4 @@
-import { io } from "socket.io-client";
+// import { io } from "socket.io-client";
 import { useEffect, useState, useRef } from "react";
 import { Send } from "lucide-react";
 
@@ -76,18 +76,18 @@ export default function Chat() {
         <div className="h-svh">
             <RegisterPseudo />
             <div className="h-[100svh] bg-cover" style={{ backgroundImage: "url('/wallpaper02.jpg')" }}>
-                <div className="h-[90svh] overflow-y-scroll">
+                <div className="h-[90svh] overflow-y-scroll mx-3">
                     {dbMessages.map((message, index) => {
                         if (message.pseudo === sessionStorage.getItem('pseudo')) {
                             return (
                                 <div key={index} className="flex justify-end p-2">
-                                    <div className="backdrop-blur-sm text-white rounded-t-3xl rounded-bl-3xl p-3 max-w-[80%]">{message.text}</div>
+                                    <div className="bg-slate-900/50 backdrop-blur-sm shadow-2xl text-white rounded-t-3xl rounded-bl-3xl p-3 max-w-[80%]">{message.text}</div>
                                 </div>
                             );
                         }
                         return (
                             <div key={index} className="flex justify-start p-2">
-                                <div className="backdrop-blur-sm text-white rounded-t-3xl rounded-br-3xl p-3 max-w-[80%]">
+                                <div className="bg-gray-800/50 backdrop-blur-2xl text-white rounded-t-3xl rounded-br-3xl p-3 max-w-[80%]">
                                     <span className="text-sm italic"> ~ {message.pseudo}</span> <br />
                                     {message.text}
                                 </div>

@@ -6,8 +6,8 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   build: {
     rollupOptions: {
-      external: ['socket.io-client']
-    }
+      external: ['socket.io-client'], // Ajoutez cette ligne
+    },
   },
   plugins: [react(), tailwindcss()],
 })
